@@ -10,8 +10,8 @@ driver=webdriver.Chrome()
 driver.get(url)
 
 try:
-    driver.find_elemeeent(By.ID,"username")
-except Exception as e:
+    driver.find_element(By.ID,"usernae")
+except NoSuchElementException as e:
     logging.error(f"NoSuchElementException: {e}")
 
 username=driver.find_element(By.ID,"username")
@@ -20,6 +20,6 @@ username.send_keys("Arunbalaji")
 password.send_keys("random79")
 login_btn=driver.find_element(By.ID,"loginBtn")
 login_btn.send_keys(Keys.RETURN)
-""" cancel_btn=driver.find_element(By.NAME,"cancelBtn")
-cancel_btn.send_keys(Keys.RETURN) """
+cancel_btn=driver.find_element(By.NAME,"cancelBtn")
+cancel_btn.send_keys(Keys.RETURN)
 time.sleep(1000)
