@@ -13,8 +13,10 @@ frame.click()
 time.sleep(5)
 nestedframe=driver.find_element(By.CSS_SELECTOR,"a[href='/nested_frames']")
 nestedframe.click()
-
-
+time.sleep(5)
+inside=driver.find_element(By.NAME,"frame-left")
+inside.send_keys(Keys.COMMAND,"a").send_keys(Keys.COMMAND,"c")
+time.sleep(5)
 
 """  # Switch to frame
 driver.switch_to.frame("frame1")
